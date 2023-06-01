@@ -5,6 +5,7 @@ body {
 
 body {
   padding-top: 56px;
+  background-color: #f5f7fb !important;
 }
 
 @media (max-width: 991.98px) {
@@ -50,6 +51,7 @@ body {
 .bg-purple {
   background-color: #6f42c1;
 }
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -121,3 +123,34 @@ body {
 .bd-mode-toggle {
   z-index: 1500;
 }
+.public-position{
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.public-position:hover{
+  background-color: #f5f7fb;
+  color: #000 !important;
+}
+
+/* .container {
+  padding: 20px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px #888;
+  margin: 20px auto 40px auto;
+} */
+/* 
+footer {
+  background: white;
+  padding: 10px 0px;
+  margin: auto;
+  text-align: center;
+}
+
+footer p {
+  margin: 0px;
+  line-height: 20px;
+} */
+

@@ -6,4 +6,5 @@
     = f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" }
   .form-actions
     = f.button :submit, "Resend unlock instructions"
-= render "devise/shared/links"
+#formFooter
+  = render "devise/shared/links"
