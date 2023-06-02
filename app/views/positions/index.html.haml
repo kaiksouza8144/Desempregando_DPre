@@ -13,11 +13,10 @@
     - @positions.each do |position|
       %tr
         %th{:scope => "row"}= position.name
-        %td= career_name(position.career)
-        %td= modality(position) # aplicar helper
-        %td= contract_name(position.contract)
+        %td= position.career
+        %td= position.remote # aplicar helper se não for remoto devemos mostra os estado e cidade da vaga
+        %td= position.contract
+        %td 1 (ver detalhes)
         %td
-          - if position.applicants.size > 0
-            = link_to "Ver aplicações (#{position.applicants.count})", position_applicants_path(position), class: 'btn btn-warning btn-sm'
-        %td
-          = link_to 'Editar', edit_position_path(position), class: 'btn btn-primary btn-sm'
+          = link_to 'Editar', edit_position_path(position), class: 'btn btn-outline-info'
+          = link_to 'Nova', new_position_path(position), class: 'btn btn-outline-primary'
