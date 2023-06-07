@@ -7,6 +7,8 @@ class Position < ApplicationRecord
 
   validates :name, :career, :contract, :city, :state, :summary, presence: true
 
+  before_save :set_slug
+
   private
 
   def set_slug

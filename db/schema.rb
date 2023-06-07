@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_31_134412) do
+ActiveRecord::Schema.define(version: 2023_06_07_131441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 2023_05_31_134412) do
 
   create_table "positions", force: :cascade do |t|
     t.string "name"
-    t.integer "career", default: 0
-    t.integer "contract", default: 0
+    t.integer "career"
+    t.integer "contract"
     t.boolean "remote"
     t.string "city"
     t.string "state"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2023_05_31_134412) do
     t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
     t.index ["company_id"], name: "index_positions_on_company_id"
   end
 
