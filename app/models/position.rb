@@ -1,5 +1,6 @@
 class Position < ApplicationRecord
   belongs_to :company
+  has_many :applicants
 
   enum career: [:developer, :business_inteligence, :information_technology, 
                 :design, :product, :technology, :other]
@@ -8,6 +9,7 @@ class Position < ApplicationRecord
   validates :name, :career, :contract, :city, :state, :summary, presence: true
 
   before_save :set_slug
+  
 
   private
 

@@ -38,7 +38,7 @@ gem 'html2haml'
 gem 'kaminari'
 # gem 'bootstrap-kaminari-views'
 # Busca
-# gem 'ransack'
+gem 'ransack'
 # Melhorar select
 # gem 'select2-rails'
 
@@ -50,6 +50,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'awesome_print'
   gem 'rspec-rails'
+  # gem 'solargraph'
 end
 
 group :development do

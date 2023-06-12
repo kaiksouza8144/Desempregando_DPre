@@ -1,4 +1,3 @@
-
 %h2= "#{@position.name} - #{@position.company.name}"
 %p= "#{career_name(@position.career)} - #{@position.city} / #{modality(@position)}, #{@position.state} - #{contract_name(@position.contract)}"
 
@@ -10,11 +9,8 @@
 
 .wrapper-form-applicant
   - if user_signed_in?
-    - if UserApplicantQuery.new(current_user.id, @position.id).call
-      %p= "Você já aplicou para essa vaga."
-    - else
-      %p= "Insira suas informações abaixo para se candidatar à vaga de #{@position.name}"
-      = render 'applicants/form'
+    %p= "Insira suas informações abaixo para se candidatar à vaga de #{@position.name}"
+    = render 'applicants/form'
   - else
     %p Você precisa está logado para se candidatar
 
