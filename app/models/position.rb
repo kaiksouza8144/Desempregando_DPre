@@ -10,7 +10,6 @@ class Position < ApplicationRecord
 
   before_save :set_slug
   
-
   private
 
   def set_slug

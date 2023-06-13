@@ -13,3 +13,7 @@
     %main.container
       = yield
     = render 'shared/footer'
+  
+  #modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "modalLabel", :tabindex => "-1"}
+    .modal-dialog.modal-lg
+      .modal-content

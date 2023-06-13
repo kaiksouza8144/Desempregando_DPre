@@ -21,6 +21,9 @@ import './src/application.scss'
 //= require popper
 //= require bootstrap
 
+global.$ = global.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;
+
 $(function () {
   'use strict'
   $('[data-toggle="offcanvas"]').on('click', function () {
