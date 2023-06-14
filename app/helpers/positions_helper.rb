@@ -4,10 +4,12 @@ module PositionsHelper
   end
 
   def url_position(position)
+
     public_position_url(position.slug)
   end
 
   def career_name(career)
+    
     I18n.t('activerecord.attributes.position.careers')[career.to_sym]
   end
 

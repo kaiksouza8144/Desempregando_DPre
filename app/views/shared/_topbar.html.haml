@@ -54,5 +54,5 @@
             %a.nav-link{href: positions_url} Minhas vagas
           %li.nav-item
             = link_to "Sair", destroy_user_session_path, method: :delete, class: 'nav-link'
-        %li.nav-item
-          %a.nav-link.active{"aria-current" => "page", :href => new_position_path, class: 'btn btn-secondary' } Publicar Vaga
+          %li.nav-item
+            %a.nav-link.active{"aria-current" => "page", :href => new_position_path, class: 'btn btn-secondary' } Publicar Vaga

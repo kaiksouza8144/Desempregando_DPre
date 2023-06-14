@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :applicants, only: [:index, :new, :create]
-  resources :positions
   resources :companies, only: [:new, :edit, :create, :update]
+  resources :positions do
+    resources :applicants, only: [:index]
+  end
+  resources :applicants, only: [:new, :create]
+  
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

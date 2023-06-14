@@ -14,7 +14,8 @@
   %tbody
     - @applicants.each do |applicant|
       %tr
-        %th{scope => "row"} = applicant.name
+        %th{scope => "row"}= applicant.name
         %td= applicant.email
         %td= applicant.phone
-        %td= link_to 'Download', rails_blob_path(applicant.resume, description: "attachment"), class: 'btn btn-warning bt-sm'
+        %td
+          = link_to 'Download', rails_blob_path(applicant.resume, description: "attachment"), class: 'btn btn-warning bt-sm'

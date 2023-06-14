@@ -1,5 +1,12 @@
 class ApplicantsController < ApplicationController
+   before_action :set_positon, only: [:index]
+
   def index
+    @applicants = @position.applicants
+    respond_to do |format|
+      format.html
+      format.csv {send_data @position.applicants.as.csv}
+    end
   end
 
   def new
@@ -24,6 +31,16 @@ class ApplicantsController < ApplicationController
   end
 
   private
+
+  def set_positon
+    begin
+      @position = current_user.company.position.find(params(:position))
+    rescue
+      redirect_to position_path
+    else
+      
+    end
+  end
 
   def applicant_params
     params.require(:applicant).permit(:name, :email, :phone, :position_id)
