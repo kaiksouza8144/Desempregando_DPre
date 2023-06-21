@@ -2,6 +2,7 @@ class ApplicantsController < ApplicationController
    before_action :set_positon, only: [:index]
 
   def index
+    @user = current_user
     @applicants = @position.applicants
     respond_to do |format|
       format.html

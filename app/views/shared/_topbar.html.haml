@@ -35,9 +35,11 @@
         Auto
         %svg.bi.ms-auto.d-none{height: "1em", width: "1em"}
           %use{href: "#check2"}
+          - ruby_code = User.first.email+" - "+User.first.profile.name
 %nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark{"aria-label" => "Main navigation"}
   .container-fluid
-    %a.navbar-brand{href: root_path} Desempregando
+    %a.navbar-brand{href: root_path} Desempregando #{ruby_code} 
+    
     %button#navbarSideCollapse.navbar-toggler.p-0.border-0{"aria-label" => "Toggle navigation", type: "button"}
       %span.navbar-toggler-icon
     #navbarsExampleDefault.navbar-collapse.offcanvas-collapse
