@@ -18,6 +18,6 @@
         %td= contract_name(position.contract)
         %td 
           - if position.applicants.size > 0
-            = link_to "Ver aplicações (#{position.apllicants.count})", position_applicants_path(position), class: 'btn btn-warning btn-sm'
+            = link_to "Ver aplicações (#{position.applicants.count})", position_applicants_path(position), class: 'btn btn-warning btn-sm'
         %td
           = link_to 'Editar', edit_position_path(position), class: 'btn btn-outline-info'
