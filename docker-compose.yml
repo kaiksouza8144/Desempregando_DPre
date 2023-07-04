@@ -1,28 +1,36 @@
-version: "2"
+version: "3"
 services:
-  db:
-    image: postgres
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: eps90013
-    ports:
-      - "54:5432" 
   app:
-    build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    container_name: ${APP_NAME}_app
+    restart: on-failure
+    build: ./docker-compose
+    tty: true
+    stdin_open: true
     volumes:
-      - .:/Desempregando_DPre
+      - .:/app
+      - bundle_cache:/usr/local/bundle
+      - ./docker-compose/database.yml:/app/config/database.yml # Here we go!
+      - ./docker-compose/.gitignore:/app/.gitignore # Here we go!
+      - ./docker-compose/.ruby-version:/app/.ruby-version # Here we go!
+      - ./docker-compose/Gemfile:/app/Gemfile # Here we go!
     ports:
-      - "3003:3000"
+      - "3000:3000"
     depends_on:
-      - db
-    links:
-      - mailcatcher
-  mailcatcher:
-    restart: on-failure:10
-    image: dockage/mailcatcher:0.7.1
+      - postgres
+    environment:
+      DATABASE_URL: postgresql://postgres@postgres/${APP_NAME}_development
+      TEST_DATABASE_URL: postgresql://postgres@postgres/${APP_NAME}_test
+  postgres:
+    container_name: ${APP_NAME}_db
+    image: postgres:13-alpine
+    command: ["postgres", "-c", "fsync=false", "-c", "full_page_writes=off"]
+    environment:
+      POSTGRES_DB: ${APP_NAME}_development
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./docker-compose/postgres:/var/lib/postgresql/data
+      - ./docker-compose/db_restore:/home/db_restore
     ports:
-      - "1080:1080"
-      - "1025:1025"
+      - "5433:5432"
+volumes:
+  bundle_cache:

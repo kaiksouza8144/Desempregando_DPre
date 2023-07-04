@@ -3,7 +3,7 @@ FROM ruby:3.2.1
 WORKDIR /app
 COPY . /app
 
-RUN apt-get update --fix-missing
+RUN apt-get update
 
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs

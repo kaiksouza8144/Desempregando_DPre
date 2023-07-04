@@ -15,5 +15,9 @@ class Position < ApplicationRecord
   def set_slug
     self.slug = "#{self.company.name.parameterize}-#{self.name.parameterize}"
   end
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["career", "city", "company_id", "contract", "created_at", "description", "id", "name", "publish", "remote", "slug", "state", "summary", "updated_at"]
+  end
   
 end
