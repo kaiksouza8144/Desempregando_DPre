@@ -17,7 +17,7 @@ gem 'jbuilder'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap'
 # gem 'bundler', '~> 2.2', '>= 2.2.33'
-gem 'trollop'
+gem 'optimist'
 gem 'yarn'
 #CSS
 gem 'bootstrap'
