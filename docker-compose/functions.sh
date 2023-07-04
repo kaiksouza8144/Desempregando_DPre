@@ -83,30 +83,31 @@ function enter(){
     docker exec -it $@ bash
 }
 
-function app(){
-    if [ $1 == "new" ]; then
-        echo criando $2
+function app() {
+    if [ "$1" = "new" ]; then
+        echo "criando $2"
         new_app
         app_turbolink_remove
-        atualiza_nome_app $2
+        atualiza_nome_app "$2"
         docker-compose up -d
-    elif [ $1 == "enter" ]; then
-        enter $APP_NAME'_app'
-    elif [ $1 == "scaffold" ]; then
-        app_scaffold ${*:2}
-    elif [ $1 == "migrate" ]; then
+    elif [ "$1" = "enter" ]; then
+        enter "$APP_NAME"_app
+    elif [ "$1" = "scaffold" ]; then
+        app_scaffold "${@:2}"
+    elif [ "$1" = "migrate" ]; then
         app rails db:migrate
-    elif [ $1 == "remove" ]; then
+    elif [ "$1" = "remove" ]; then
         remove_app
-    elif [ $1 == "user_autentication_api" ]; then
+    elif [ "$1" = "user_autentication_api" ]; then
         app_config_devise
         app rails g devise_token_auth:install User auth
         app_config_devise_token_auth
         app rails db:migrate
     else
-        docker-compose run app $@
+        docker-compose run app "$@"
     fi
 }
+
 
 function new_app(){
     app rails new ../app
@@ -127,11 +128,11 @@ function app_scaffold(){
 }
 
 function db(){
-    if [ $1 == "restore" ]; then
+    if [ $1 = "restore" ]; then
         echo 'iniciando restauração de '$APP_NAME'_development...'
         docker container exec $APP_NAME'_db' psql -d $APP_NAME'_development' -f '/home/db_restore/'$2 -U postgres
         echo $APP_NAME'_development restaurado com sucesso'
-    elif [ $1 == "reset" ]; then
+    elif [ $1 = "reset" ]; then
         app rails db:drop
         app rails db:create
         app rails db:migrate
