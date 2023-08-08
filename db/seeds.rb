@@ -9,3 +9,7 @@ if User.count == 0
   user = User.create!(email: 'user@gmail.com', password: '123456', password_confirmation: '123456')
   ProfileUser.create!(user_id: 1, profile_id: 2)
 end
+
+if Skill.count == 0
+  Skill.create!(name: "pescador", description: "homen com uma vara de pesca")
+end
