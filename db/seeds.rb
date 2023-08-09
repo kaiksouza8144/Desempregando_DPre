@@ -11,5 +11,5 @@ if User.count == 0
 end
 
 if Skill.count == 0
-  Skill.create!(name: "pescador", description: "homen com uma vara de pesca")
+  Skill.create!(name: "pescador", description: "homen com uma vara de pesca,com tedencias a destorcer a verdade")
 end
