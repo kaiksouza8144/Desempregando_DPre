@@ -9,10 +9,9 @@ class User::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  POST /resource
+  #POST /resource
   def create
     super
-    binding.pry
     ProfileUser.create(profile_id: params["profile_id"],user_id:user.now  )
   end
 
