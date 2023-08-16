@@ -10,6 +10,17 @@ class Position < ApplicationRecord
 
   before_save :set_slug
   
+  def is_remote
+    if self.remote == true
+      return true
+    else
+      return false
+    end
+  end
+
+
+    
+
   private
 
   def set_slug
@@ -19,5 +30,7 @@ class Position < ApplicationRecord
   def self.ransackable_attributes(auth_object = nil)
     ["career", "city", "company_id", "contract", "created_at", "description", "id", "name", "publish", "remote", "slug", "state", "summary", "updated_at"]
   end
+  
+ 
   
 end

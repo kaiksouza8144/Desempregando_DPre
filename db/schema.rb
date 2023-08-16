@@ -68,6 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_06_192032) do
     t.integer "career"
     t.integer "contract"
     t.boolean "remote"
+    t.boolean "full_time"
     t.string "city"
     t.string "state"
     t.text "summary"
