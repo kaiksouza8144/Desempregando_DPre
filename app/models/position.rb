@@ -26,9 +26,6 @@ class Position < ApplicationRecord
     end
   end
 
-
-
-
   private
 
   def set_slug
