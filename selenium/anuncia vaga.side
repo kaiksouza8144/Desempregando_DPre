@@ -1,0 +1,221 @@
+{
+  "id": "83aa64f8-19bb-48d1-8121-dfcf74dd88dc",
+  "version": "2.0",
+  "name": "anuncia vaga",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "b741c340-5c5b-485e-b98a-1295543751ff",
+    "name": "Untitled",
+    "commands": [{
+      "id": "2f257fdb-3047-4589-a374-82bac721e7dc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "012b89a5-4457-407b-ad5c-4c735310fb46",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19c364a1-d2e9-4baf-b22e-ad5b90196813",
+      "comment": "",
+      "command": "click",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Desempregando')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbdd7027-eddc-4c1d-ad5f-aeed8d4bb9ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Publicar Vaga",
+      "targets": [
+        ["linkText=Publicar Vaga", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Publicar Vaga')]", "xpath:link"],
+        ["xpath=//div[@id='navbarsExampleDefault']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/positions/new')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Publicar Vaga')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30e41b1a-7af0-4674-90e4-ce20b5a538b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=position_name",
+      "targets": [
+        ["id=position_name", "id"],
+        ["name=position[name]", "name"],
+        ["css=#position_name", "css:finder"],
+        ["xpath=//input[@id='position_name']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbc41477-de84-4449-a910-d028c25bff41",
+      "comment": "",
+      "command": "type",
+      "target": "id=position_name",
+      "targets": [
+        ["id=position_name", "id"],
+        ["name=position[name]", "name"],
+        ["css=#position_name", "css:finder"],
+        ["xpath=//input[@id='position_name']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "auxia de escritoio"
+    }, {
+      "id": "51dbafdb-9b36-412c-8193-7dae79455f2b",
+      "comment": "",
+      "command": "click",
+      "target": "id=position_publish",
+      "targets": [
+        ["id=position_publish", "id"],
+        ["css=#position_publish", "css:finder"],
+        ["xpath=//input[@id='position_publish']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/fieldset[2]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b5a6800-989b-4b31-9f51-0419e5d01fbe",
+      "comment": "",
+      "command": "click",
+      "target": "id=position_city",
+      "targets": [
+        ["id=position_city", "id"],
+        ["name=position[city]", "name"],
+        ["css=#position_city", "css:finder"],
+        ["xpath=//input[@id='position_city']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f223642e-8ffa-49d5-af12-a25e0f14a1c3",
+      "comment": "",
+      "command": "type",
+      "target": "id=position_city",
+      "targets": [
+        ["id=position_city", "id"],
+        ["name=position[city]", "name"],
+        ["css=#position_city", "css:finder"],
+        ["xpath=//input[@id='position_city']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "buriticupu"
+    }, {
+      "id": "956c2083-bd4f-4acc-b9e5-3797929499a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=position_state",
+      "targets": [
+        ["id=position_state", "id"],
+        ["name=position[state]", "name"],
+        ["css=#position_state", "css:finder"],
+        ["xpath=//select[@id='position_state']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div[5]/select", "xpath:idRelative"],
+        ["xpath=//div[5]/select", "xpath:position"],
+        ["xpath=//select[contains(.,'Acre\nAlagoas\nAmapá\nAmazonas\nBahia\nCeará\nDistrito Federal\nEspírito Santo\nGoiás\nMaranhão\nMato Grosso\nMato Grosso do Sul\nMinas Gerais\nPará\nParaíba\nParaná\nPernambuco\nPiauí\nRio de Janeiro\nRio Grande do Norte\nRio Grande do Sul\nRondônia\nRoraima\nSanta Catarina\nSão Paulo\nSergipe\nTocantins')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56017be1-4a58-4970-af36-08069dd1359e",
+      "comment": "",
+      "command": "select",
+      "target": "id=position_state",
+      "targets": [],
+      "value": "label=Maranhão"
+    }, {
+      "id": "bc1b5da0-2653-4d37-8857-8102468cab3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=position_summary",
+      "targets": [
+        ["id=position_summary", "id"],
+        ["name=position[summary]", "name"],
+        ["css=#position_summary", "css:finder"],
+        ["xpath=//textarea[@id='position_summary']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div[6]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e87c310-6427-4323-bc6b-1a069746ad79",
+      "comment": "",
+      "command": "type",
+      "target": "id=position_summary",
+      "targets": [
+        ["id=position_summary", "id"],
+        ["name=position[summary]", "name"],
+        ["css=#position_summary", "css:finder"],
+        ["xpath=//textarea[@id='position_summary']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div[6]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "asaaaaaaaaaa"
+    }, {
+      "id": "ebcd6963-a438-4000-84ac-e2bffd4030e9",
+      "comment": "",
+      "command": "click",
+      "target": "id=position_description",
+      "targets": [
+        ["id=position_description", "id"],
+        ["name=position[description]", "name"],
+        ["css=#position_description", "css:finder"],
+        ["xpath=//textarea[@id='position_description']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div[7]/textarea", "xpath:idRelative"],
+        ["xpath=//div[7]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "075c3152-6b3f-4bec-8f19-7dc8ad49e2ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=position_description",
+      "targets": [
+        ["id=position_description", "id"],
+        ["name=position[description]", "name"],
+        ["css=#position_description", "css:finder"],
+        ["xpath=//textarea[@id='position_description']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/div[7]/textarea", "xpath:idRelative"],
+        ["xpath=//div[7]/textarea", "xpath:position"]
+      ],
+      "value": "aaaaaaaaaaaaaaaa"
+    }, {
+      "id": "3cd19364-8058-49c3-9bd2-203c0505848f",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//form[@id='new_position']/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5286e031-7bc0-42ee-9c60-94bd09218cf9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b741c340-5c5b-485e-b98a-1295543751ff"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
