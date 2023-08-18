@@ -40,5 +40,4 @@ class Position < ApplicationRecord
   end
 
 
-
 end
